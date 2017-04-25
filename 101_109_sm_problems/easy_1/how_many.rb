@@ -21,11 +21,24 @@
 #   Stop when all values in the array have been compared/counted.
 
 def count_occurrences(input_array)
-  input_array.uniq.each do |word|
+  input_array.uniq.each do |word|               # Is this method hunting?
     puts "#{word}: #{input_array.count(word)}"
   end
 end
 
+# The hash method:
+
+def count_occurrences_2(input_array)
+  occurrences = {}                       # Initialize an empty hash
+
+  input_array.each do |word|
+    occurrences[word] = input_array.count(word)
+  end
+
+  occurrences.each do |word, count|
+    puts "#{word} => #{count}"
+  end  
+end
 
 
 
@@ -33,3 +46,7 @@ end
 vehicles = ['car', 'car', 'truck', 'car', 'SUV', 'truck', 'motorcycle', 'motorcycle', 'car', 'truck']
 
 count_occurrences(vehicles)
+
+puts "--------------"
+
+count_occurrences_2(vehicles)
