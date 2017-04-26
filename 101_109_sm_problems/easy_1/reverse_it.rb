@@ -32,6 +32,11 @@ def reverse_sentence(sentence_string)
   reversed_sentence_string
 end
 
+# Launch school solution
+
+def reverse_sentence_ls(string)
+  string.split.reverse.join(' ')
+end
 
 
 # Examples
