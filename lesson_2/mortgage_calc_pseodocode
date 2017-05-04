@@ -1,0 +1,24 @@
+START
+
+GET loan_amount - ask for a float
+- subroutine - check if the loan amount is a valid float or integer, and ask for 
+  re-entry if it isn't
+
+GET annual_percentage_rate - ask for a percentage in the form of a float less than 100
+- subroutine - check if the APR is a valid float less than 100, ask for 
+  re-entry if it isn't
+
+GET loan_duration - ask for years
+- subroutine - check if the the entry is a valid integer, and ask for   
+  re-entry if it isn't
+
+- divide the annual_percentage_rate (expressed as a percentage) by 12 to get the monthly_interest_rate
+
+- divide the loan_duration by 12 to get the loan_duration_in_months - loan_months
+
+SET monthly_payment = loan_amount * (monthly_interest_rate / (1 - (1 + monthly_interest_rate)**(-loan_duration_in_months)))
+
+PRINT monthly_payment
+
+END
+
