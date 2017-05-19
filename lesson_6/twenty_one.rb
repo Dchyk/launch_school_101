@@ -50,7 +50,7 @@ def busts?(hand_total)
   hand_total > 21
 end
 
-def calculate_winner(dealer, table, player) # cards
+def return_winner(dealer, table, player) # cards
   if calculate_dealer_hand(dealer, table) > calculate_hand(player)
     'Dealer wins!'
   elsif calculate_dealer_hand(dealer, table) < calculate_hand(player)
@@ -122,7 +122,7 @@ loop do # Begin outer main game loop
         prompt "You win! The dealer busted!"
       else
         display_totals(dealer_hand, table_card, player_hand)
-        display_winner(calculate_winner(dealer_hand, table_card, player_hand))
+        display_winner(return_winner(dealer_hand, table_card, player_hand))
       end
     end
 
