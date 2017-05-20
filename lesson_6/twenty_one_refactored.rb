@@ -12,7 +12,7 @@ def prompt(text)
 end
 
 def create_deck
-  deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'] * 4
+  [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'] * 4
 end
 
 def deal_card(current_deck)
@@ -86,6 +86,7 @@ loop do # Begin outer main game loop
   # Begin single game loop
   loop do
     # Deal the initial hand
+
     deal_cards(player_hand, dealer_hand, table_card, deck)
 
     loop do
