@@ -19,14 +19,14 @@ def merge(arr1, arr2)
 
   combined_arr << arr1 << arr2 
 
-  combined_arr.flatten.uniq!
+  combined_arr.flatten.uniq
 end
 
 merge([1, 3, 5], [3, 6, 9]) == [1, 3, 5, 6, 9]
 #=> true
 
 def merge2(arr1, arr2)
-  arr1.zip(arr2).flatten.sort.uniq!
+  arr1.zip(arr2).flatten.sort.uniq
 end
 
 merge2([1, 3, 5], [3, 6, 9]) == [1, 3, 5, 6, 9]
