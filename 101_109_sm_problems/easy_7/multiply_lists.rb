@@ -12,6 +12,13 @@ def multiply_list(array1, array2)
   array1.map.with_index { |num, index| num * array2[index] }
 end
 
+# Solution with #zip
+
+def multiply_list2(array1, array2)
+  array1.zip(array2).map { |sub_arr| sub_arr.inject(:*) }
+end
+
+
 # Examples
 
 puts multiply_list([3, 5, 7], [9, 10, 11]) == [27, 50, 77]
